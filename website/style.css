@@ -1,0 +1,200 @@
+
+:root{
+  --white: #FFFFFF;
+  --red: #FF0063;
+  --green: #66BFBF;
+  --light: #9DDAC6;
+  --black: #000;
+  --box-shadow: 2px 4px 5px #444;
+  --border: .2rem solid rgba(0, 0, 0, .1);
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;;
+  outline: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+html{
+  font-size: 62.5%;
+
+}
+body{
+    background: linear-gradient(var(--red),var(--green));
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--white);
+    margin: 10% auto;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.holder{
+ text-align: center;
+}
+
+.entry{
+  background: rgba(59, 74, 107, .4);
+  margin: 1rem auto;
+  color: var(--black);
+  text-transform: none;
+  border: var(--border);
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 50rem;
+  font-family: 'Oswald', sans-serif;
+  display: block;
+
+}
+
+.feel,.zip{
+  margin: 2rem auto;
+}
+.error{
+  background-color:var(--red);
+  border:none;
+  color:var(--white);
+  font-size: 5rem;
+}
+#btn{
+  margin: 1rem auto;
+}
+#content{
+  word-wrap: break-word;
+  text-transform: none;
+}
+.headline {
+    font-size: 5rem;
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    border-radius: 25px 25px 0 0;
+    line-height: 2;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display: block;
+    font-size: 2.5rem;
+    padding: .5rem;
+    color:var(--red);
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 50rem;
+    background:var(--light);
+    color: var(--black);
+    text-transform: none;
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+button{
+    width: 30rem;
+    height:10rem;
+    background: var(--green);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 4rem;
+    margin:1rem;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    background:var(--light);
+    color: var(--black);
+    text-transform: none;
+    border: var(--border);
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 50rem;
+    height: 20rem;
+    font-family: 'Oswald', sans-serif;
+    display: block;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    color: var(--font);
+    font-family: 'Oswald', sans-serif;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--font);
+    font-family: 'Oswald', sans-serif;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--font);
+    font-family: 'Oswald', sans-serif;
+
+}
+@media (max-width:930px) {
+  .headline{
+    font-size:3rem;
+  }
+
+  label{
+    font-size: 2rem;
+  }
+
+  input, textarea , .entry{
+    width : 75%;
+    margin: 0 auto;
+  }
+
+  #feelings{
+    margin: 0 auto;
+  }
+
+  button{
+    width:20rem ;
+    height:6rem;
+  }
+
+}
+@media (max-width:450px) {
+  html{
+    font-size: 55%;
+  }
+
+  button{
+      width:15rem ;
+      height:6rem;
+  }
+
+}
