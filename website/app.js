@@ -12,7 +12,7 @@ let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 * @param {string} feelings - user's feelings
 */
 const weatherData = async (zip, feelings) => {
-  // Checking if the zip code i valid
+  // Checking if the zip code is valid
   if ( !isNaN(Number(zip)) && zip.length == 5 ){
     // Creating Url
     const url = baseUrl + "zip=" + zip + "&appid=" + apiKey;
