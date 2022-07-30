@@ -1,10 +1,10 @@
 // Personal API Key for OpenWeatherMap API
-const apiKey = 'dc2fedc4a84809bf9db03dea296d0593';
+const apiKey = 'dc2fedc4a84809bf9db03dea296d0593&units=imperial';
 //  Base Url
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?'
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1 +'/'+ d.getDate()+'/'+ d.getFullYear();
 
 /**
 * @description Fetching data from OpenWeatherMap
@@ -83,7 +83,7 @@ const updateUI = async () =>{
         // Write updated data to DOM elements
         document.querySelector(".entry").classList.remove("error");
         document.querySelector(".title").textContent ="";
-        document.getElementById('temp').innerHTML = "Temperature: "+Math.round(weatherTodayData.temperature-273) + '°C';
+        document.getElementById('temp').innerHTML = "Temperature: "+Math.round(weatherTodayData.temperature) + '°F';
         document.getElementById('content').innerHTML = weatherTodayData.feelings;
         document.getElementById("date").innerHTML = "Today's Date "+weatherTodayData.date;
       } else{
